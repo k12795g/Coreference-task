@@ -6,53 +6,19 @@
 2. Answer the following questions.
 - What is the problem we are trying to solve?
 
-	- 用於解析一個句子中，各種代詞或實際所指的對象，避免因代詞導致的對象混淆。
+	- 用於解析一個句子中，不同表達方式實際所指的對象，避免因代詞導致的訓練困難。
 	
 - What does the training data look like?
 
 	
-	- 以下是CoNLL資料的格式：
-		```	#begin document (example);
-		example 0   0   John    (0)
-		example 0   1   went    -
-		example 0   2   to      -
-		example 0   3   the     -
-		example 0   4   market  (1)
-		example 0   5   .       -
-
-		example 1   0   He      (0)
-		example 1   1   bought  -
-		example 1   2   some    -
-		example 1   3   apples  -
-		example 1   4   and     -
-		example 1   5   left    -
-		example 1   6   the     -
-		example 1   7   place. (1)
-
-		example 2   0   Later, -
-		example 2   1   he      (0)
-		example 2   2   returned -
-		example 2   3   to      -
-		example 2   4   the     -
-		example 2   5   market. (1)
-		#end document
+	- CoNLL資料的格式：
+		```	
+		1   我   我   PRON    PRON    _   2   nsubj   _   _
+		2   喜歡  喜歡  VERB    VERB    _   0   root    _   _
+		3   蘋果  蘋果  NOUN    NOUN    _   2   obj     _   _
 		```
-	- 以下是JSON資料的格式：
-		```
-		{
-			"text": "王先生是成功大學的一位數學老師。他在那裡教了10年。那位老師很受學生歡迎。",
-			"coreferences": [
-				{
-					"entity": "王先生",
-					"mentions": ["他", "那位老師"]
-				},
-				{
-					"entity": "成功大學",
-					"mentions": ["那裡"]
-				},
-			]
-		}
-		```
+		序號 詞語 詞幹 粗粒度詞性 細粒度詞性 中心詞 句法特徵 與中心詞的依存關係
+		
 - What is your plan to handle the data? 
   - Where to get the data?
   
