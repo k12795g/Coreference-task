@@ -17,7 +17,7 @@
 		2   喜歡  喜歡  VERB    VERB    _   0   root    _   _
 		3   蘋果  蘋果  NOUN    NOUN    _   2   obj     _   _
 		```
-		序號 詞語 詞幹 粗粒度詞性 細粒度詞性 中心詞 句法特徵 與中心詞的依存關係
+		序號 詞語 詞幹 粗粒度詞性 細粒度詞性 句法特徵 中心詞 與中心詞的依存關係
 		
 - What is your plan to handle the data? 
   - Where to get the data?
