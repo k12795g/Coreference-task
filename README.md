@@ -39,9 +39,9 @@
 	- 爬取資料、斷詞、標註、生成所需格式檔案
 	
 - What are the common approaches (algorithm/model) to solve this problem? 
-
-	- AllenNLP
+	- BERT
 	- Huggingface's coreference resolution model
+	- AllenNLP
 	
 
 
